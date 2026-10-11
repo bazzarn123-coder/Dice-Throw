@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>3D Physics Dice Roller</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23d97706'/><circle cx='30' cy='30' r='12' fill='%23ffffff'/><circle cx='70' cy='30' r='12' fill='%23ffffff'/><circle cx='50' cy='50' r='12' fill='%23ffffff'/><circle cx='30' cy='70' r='12' fill='%23ffffff'/><circle cx='70' cy='70' r='12' fill='%23ffffff'/></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
@@ -112,7 +113,7 @@
         </div>
 
         <div id="hint-banner" class="absolute bottom-4 text-neutral-300 text-xs pointer-events-none bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/10">
-            Tap screen anywhere to roll
+            Tap anywhere to roll dice
         </div>
     </div>
 
@@ -703,7 +704,6 @@
             setDomeBoundary(false);
         }
 
-        // Tap anywhere on the canvas or screen to roll
         window.addEventListener('pointerdown', (e) => {
             if (gameScreen.classList.contains('hidden')) return;
             if (e.target.tagName === 'BUTTON') return;
